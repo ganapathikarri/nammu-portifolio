@@ -1,0 +1,267 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(145deg, #00FFFF, #FF1493); /* Cyan to Deep Pink */
+    color: #fff;
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: #111; /* Change navbar background */
+    padding: 15px 5%;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .logo img {
+    width: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Neon Link Effect - Change Neon Color Here */
+.neon-link {
+    position: relative;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.neon-link:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: #ff00ff; /* Change Neon Color Here (e.g., neon pink) */
+    transition: all 0.4s ease;
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: 0;
+    border-radius: 50%;
+}
+
+.nav-links li a:hover {
+    color: #ff00ff; /* Change Hover Neon Color Here */
+}
+
+.nav-links li a:hover::before {
+    opacity: 1;
+    width: 0;
+    height: 0;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('background-image.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #bbb;
+}
+
+/* Neon Button - Change Neon Color Here */
+/* Neon Link Effect - Change Neon Color and Animation */
+.neon-link {
+    position: relative;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.neon-link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0%;
+    height: 2px;  /* The height of the neon underline */
+    background: #ff00ff; /* Change Neon Color Here (e.g., neon pink) */
+    transition: width 0.4s ease, left 0.4s ease;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.nav-links li a:hover {
+    color: #00FFFF;; /* Change Hover Neon Color Here */
+}
+
+.nav-links li a:hover::before {
+    width: 100%;
+    left: 0%;
+}
+
+/* Neon Button Effect - Slide In From Sides */
+.neon-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    border: 2px solid transparent;
+    background: #222;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.neon-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0%;
+    height: 100%;
+    background-color: #00FFFF; /* Change Neon Color Here */
+    transition: width 0.4s ease, left 0.4s ease;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.neon-button:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.neon-button:hover {
+    color: #00FFFF;; /* Change Hover Neon Color Here */
+    border: 2px solid #00FFFF;;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('background-image.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #bbb;
+}
+
+/* Section Styling */
+.section {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+/* Projects Card */
+.project-card {
+    background: #333;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #bbb;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 20px;
+    color: #bbb;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .neon-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 40px 2%;
+    }
+}
